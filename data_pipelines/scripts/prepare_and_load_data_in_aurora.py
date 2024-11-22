@@ -270,4 +270,15 @@ if __name__ == "__main__":
         db_engine
     )
 
+    raw_creditsafe_data_tables_base_path = os.path.join(input_data_base_path, "creditsafe_data")
+    tables_creditsafe_data_paths = os.listdir(raw_creditsafe_data_tables_base_path)
+
+    print(raw_creditsafe_data_tables_base_path, tables_creditsafe_data_paths)
+    load_sql_tables(
+        raw_creditsafe_data_tables_base_path,
+        tables_creditsafe_data_paths,
+        columns_to_load,
+        db_engine
+    )
+
     test_db_connection()

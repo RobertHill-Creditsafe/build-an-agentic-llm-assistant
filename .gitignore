@@ -1,2 +1,3 @@
 __pycache__
 data_pipelines/raw_documents/*
+data_pipelines/creditsafe_data/*
