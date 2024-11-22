@@ -8,6 +8,7 @@ import boto3
 import logging
 from botocore.exceptions import ClientError
 import sys
+import requests
 
 sys.path.append(os.path.abspath("."))
 from utils.helpers import store_list_to_s3
@@ -237,7 +238,7 @@ docs_mapping = {
     ]
 }
 
-bedrock_runtime = boto3.client("bedrock-runtime", region_name="us-west-2")
+bedrock_runtime = boto3.client("bedrock-runtime", region_name="eu-central-1")
 llm_model_id = "anthropic.claude-3-sonnet-20240229-v1:0"
 
 
